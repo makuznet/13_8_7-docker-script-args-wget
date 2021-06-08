@@ -71,6 +71,7 @@ This repo was inspired by [skillfactory.ru](https://skillfactory.ru/devops#sylla
 - [Use volumes](https://docs.docker.com/storage/volumes/)
 - [Running Custom Scripts In Docker With Arguments](https://devopscube.com/run-scripts-docker-arguments/)  
 - [How to run wget inside Ubuntu Docker image](https://stackoverflow.com/questions/28885137/how-to-run-wget-inside-ubuntu-docker-image)
+- [Simple docker images with Debian](https://docs.qgis.org/3.16/ru/docs/server_manual/containerized_deployment.html)
 
 ## License
 Follow all involved parties licenses terms and conditions.
