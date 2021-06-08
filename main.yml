@@ -6,3 +6,5 @@
       tags: docker
     - role: copy-conf
       tags: copy-conf
+    # - role: copy-image
+    #   tags: copy-image

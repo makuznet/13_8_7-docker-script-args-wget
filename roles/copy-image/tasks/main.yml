@@ -1,0 +1,6 @@
+- name: copy image to my Mac
+  ansible.builtin.fetch:
+    src: /tmp/favicon-image.tar
+    dest: /Users/makuznet/Documents/sfactory/13_8_7-docker-image-py-favicon/images/
+    remote_src: true
+    flat: yes

@@ -2,12 +2,20 @@
 > This repo shows how to build and run a Docker container, for example, downloading favicons.
 
 ## Usage
-### List of commands
+Download `favicon-image.tar` file to a host with Docker.  
+Fuse the image to your Docker:
+```bash
+docker load -i /Downloads/favicon-image.tar
+```
+Follow next section commands to run a container.
+
+## List of commands to build and run the image
 - build an image;
 - create a volume;
 - run a container with a mounted volume and a url;  
 - remove a container;
 - remove a volume; 
+- make a tar file to share the image;
 - remove an image;
 
 > Don't miss a dot in the end of the `docker build` command !
@@ -26,6 +34,11 @@ docker rm $(docker ps -aq)
 
 # Remove all volumes; -q means list volumes names only
 docker volume rm $(docker volume ls -q) 
+
+# make a tar file to share the image; 
+# execute a command on the host to run Ansible copy-image role (uncomment it first in the main.yml)
+# ansible-playbook -i terraform-do/inventory.yml main.yml --tags=copy-image
+docker save -o /tmp/favicon-image.tar favicon-image
 
 # Remove an image
 docker image rm favicon-bike24
