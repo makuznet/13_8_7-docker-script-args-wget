@@ -1,4 +1,4 @@
-# Downloading favicons
+# Custom scripts with arguments in Docker
 > This repo shows how to build and run a Docker container, for example, downloading favicons.
 
 ## Usage
@@ -40,12 +40,6 @@ COPY ./favicon.sh /
 RUN chmod +x /favicon.sh
 ENTRYPOINT ["/favicon.sh"] # You can't overwrite it, so it's worth using it to run the script
 CMD [ "https://skillfactory.ru" ] # You can overwrite it when running a container; ideal for script arguments 
-```
-
-## Extra
-### Nginx reload
-```bash
-docker exec rbm-dkr-04 /bin/sh -c "nginx -s reload"
 ```
 
 ## Installation
