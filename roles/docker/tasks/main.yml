@@ -1,0 +1,11 @@
+---
+- name: installing apps
+  apt:
+    update_cache: yes
+    name: "{{ item }}"
+    state: present
+  loop:
+    - docker.io
+    - curl
+
+

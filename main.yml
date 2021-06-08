@@ -1,0 +1,8 @@
+---
+- name: Prepare VPS
+  hosts: web
+  roles:
+    - role: docker
+      tags: docker
+    - role: copy-conf
+      tags: copy-conf

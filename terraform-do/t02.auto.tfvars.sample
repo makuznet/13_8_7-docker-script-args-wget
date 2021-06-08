@@ -1,0 +1,5 @@
+rtoken = "digitalocean token"
+makuznet = "ssh-rsa public key"
+aws_akey = "aws access key"
+aws_skey = "aws secret key"
+login_user = "user"

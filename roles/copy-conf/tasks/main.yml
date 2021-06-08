@@ -1,0 +1,23 @@
+---
+- name: creating dirs
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: 0755
+  loop:
+    - "/root/favicons"
+
+- name: copying files
+  copy:
+    src: "{{ item.src_file }}"
+    dest: "{{ item.dest_file }}"
+    mode: 0646
+  loop:
+    - {
+      src_file: "files/Dockerfile",
+      dest_file: "/root/favicons/Dockerfile"
+    }
+    - {
+      src_file: "files/favicon.sh",
+      dest_file: "/root/favicons/favicon.sh"
+    }
